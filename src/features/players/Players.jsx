@@ -35,15 +35,15 @@ const Players = () => {
         // Use the player's ID as the key for this div
         <div key={player.id} className="player-card">
           {/* Display the player's image, with the player's name as alt text */}
-          {player.id.imageUrl}
+          <img src={player.imageUrl} alt={player.name}/>
           {player.id.name}
           <div className="player-details">
             
-            <h2>  {player.id.name} </h2> 
+            <h2>  {player.name} </h2> 
             
-            <p>  {player.id.breed} </p> 
+            <p>  {player.breed} </p> 
             
-            <p> {player.id.status} </p>
+            <p> {player.status} </p>
           </div>
         </div>
       ))}

@@ -20,8 +20,11 @@ body {
 /* Styling for the container that holds the player cards. */
 .players {
    /* The player cards are displayed using flexbox. */
+   display: flex;
  /* The player cards will wrap onto the next line if there is not enough space. */
+  flex-wrap: wrap;
  /* The player cards are centered on the line. */
+  justify-content: center;
 }
 
 /* Styling for individual player cards. */
@@ -30,8 +33,11 @@ body {
   height: 380px; /* The height of the card. */
   margin: 10px; /* The margin around the card. */
    /* The background color of the card. */
+   background-color: aqua;
 /* The border around the card. */
+border: solid black;
  /* The radius of the card's corners. */
+ border-radius: 5px;
    /* The shadow effect around the card. */
   overflow: hidden; /* Any content that goes outside the card will be hidden. */
   position: relative; /* The card's position is set to relative so it can be moved using the transform property. */
@@ -41,13 +47,20 @@ body {
 /* Styling for when a user hovers over a player card. */
 .player-card:hover {
   /* The card moves up 5 pixels when hovered over. */
+  transform: translateY(
+    -5px
+  );
 }
 
 /* Styling for the container that holds the player's image. */
 .player-image-container {
+  display: flex;
  /* The image is centered. */
+ align-content: center;
  /* The image is centered along the horizontal axis. */
+justify-content: center;
   /* The image is centered along the vertical axis. */
+align-items: baseline;
   height: 300px; /* The height of the image container. */
   padding: 10px; /* The padding around the image. */
 }
@@ -57,8 +70,11 @@ body {
   width: 250px; /* The width of the image. */
   height: 250px; /* The height of the image. */
   /* The image will cover the entire area of its container without distorting its aspect ratio. */
+  object-fit: contain; 
   /* The image is displayed using CSS Grid. */
- /* The margin to the left of the image. */
+  display: grid;
+  /* The margin to the left of the image. */
+  margin-left: 12px;
 }
 
 /* Styling for the player's details (name, breed, status). */
